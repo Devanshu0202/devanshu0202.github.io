@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devanshu Sisodiya | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      background: #95c5c2;
+      color: #1d1d1d;
+      padding: 20px;
+    }
+    header {
+      background: #1d1d1d;
+      color: #f7f7f7;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #1d1d1d;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    section {
+      margin: 40px 0;
+    }
+    .skills-list span {
+      display: inline-block;
+      background: #555;
+      color: white;
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .btn, button {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .social a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Devanshu Sisodiya</h1>
+    <p>Computer Science Student | Web Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a final-year Computer Science and Engineering (Data Science) student with strong knowledge in Java, DSA, and Web Development. Completed an internship as a Web Developer and developed multiple mini-projects. Passionate about solving real-world problems and continuously learning
+ new technologies.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Portfolio Website</strong> –  A personal website to showcase resume, skills, and contact info. Tech Used: HTML, CSS, JavaScript. </li>
+      <li><strong>Student Result System</strong> – To manage academic records using file handling and GUI. Tech Used: Java,
+ AWT/Swin.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      <span>Java</span><span>C</span><span>C++</span>
+      <span>MySQL</span><span>DSA</span>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social">
+      <a href="https://github.com/Devanshu0202" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/devanshu-sisodiya-83157b256" target="_blank">LinkedIn</a>
+      <a href="mailto:moneusisodia@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Devanshu Sisodiya</p>
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thanks for contacting me! I'll get back to you soon.");
+    });
+  </script>
+</body>
+</html>
