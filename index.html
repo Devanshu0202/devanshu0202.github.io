@@ -128,10 +128,32 @@
   </footer>
 
   <script>
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thanks for contacting me! I'll get back to you soon.");
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // 👇 Ye Formspree API ko request bhejega
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://formspree.io/f/mldlllzy", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+    .then((response) => {
+      if (response.ok) {
+        alert("Thanks for contacting me! I'll get back to you soon.");
+        form.reset(); // 👈 Ye clear karega form ke fields
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
+    })
+    .catch((error) => {
+      alert("Oops! There was a problem submitting your form");
     });
-  </script>
+  });
+</script>
 </body>
 </html>
