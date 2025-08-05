@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -179,4 +179,196 @@
     });
   </script>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devanshu Sisodiya | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      background: #f4f6f8;
+      color: #1e293b;
+      padding: 20px;
+    }
+    header {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #14b8a6;
+    }
+    section {
+      margin: 40px 0;
+      padding: 20px;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    section:nth-child(even) {
+      background: #e0f7fa;
+    }
+    h2 {
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+    .skills-list span {
+      display: inline-block;
+      background: #000000;
+      color: white;
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+    }
+    .btn, button {
+      background: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover, button:hover {
+      background: #000000;
+    }
+    .social a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .social a:hover {
+      color: #14b8a6;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Devanshu Sisodiya</h1>
+    <p>Computer Science Student | Web Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Final-year Computer Science and Engineering (Data Science) student with strong knowledge in Java, DSA, and Web Development. Completed a Web Developer internship at EFOS Edumarketers Pvt. Ltd, where I contributed to UI design, API integration, and responsive websites. Passionate about solving real-world problems and exploring new technologies.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Portfolio Website</strong> – A personal website to showcase resume, skills, and contact info. <br>🔗 <a href="https://devanshu0202.github.io" target="_blank">Visit Site</a></li>
+      <li><strong>Student Result Management System</strong> – Java desktop app to manage academic records using file handling and GUI.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <h3>Technical Skills</h3>
+    <div class="skills-list">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      <span>Java</span><span>C</span><span>C++</span>
+      <span>MySQL</span><span>Power BI</span><span>MS Excel</span>
+      <span>Git</span><span>GitHub</span><span>DSA</span>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>C Programming Language – INCAPP Education Institute</li>
+      <li>Power BI Basics – UniAthena & CIQ (UK)</li>
+      <li>Data Science & Analytics – HP LIFE (HP Foundation)</li>
+      <li>Python 101 for Data Science – IBM (CognitiveClass.ai)</li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social">
+      <a href="https://github.com/Devanshu0202" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/devanshu-sisodiya-83157b256" target="_blank">LinkedIn</a>
+      <a href="mailto:moneusisodia@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Devanshu Sisodiya</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch("https://formspree.io/f/mldlllzy", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("Thanks for contacting me! I'll get back to you soon.");
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+      })
+      .catch(() => {
+        alert("Oops! Something went wrong.");
+      });
+    });
+  </script>
+</body>
 </html>
+
